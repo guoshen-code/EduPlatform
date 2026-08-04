@@ -47,6 +47,7 @@ public class RabbitMqHelper {
         log.debug("准备发送消息，exchange：{}， RoutingKey：{}， message：{}", exchange, routingKey, t);
         // 1.设置消息标示，用于消息确认，消息发送失败直接抛出异常，交给调用者处理
         String id = UUID.randomUUID().toString(true);
+        // 1.1设置消息id
         CorrelationData correlationData = new CorrelationData(id);
         // 2.设置发送超时时间为500毫秒
         rabbitTemplate.setReplyTimeout(500);

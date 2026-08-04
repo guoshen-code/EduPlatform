@@ -9,6 +9,9 @@ spring:
     name: gateway-service
   cloud:
     nacos:
+      server-addr: 10.32.27.251:8848
+      username: nacos
+      password: nacos
       config:
         file-extension: yaml
         shared-configs: # 共享配置
