@@ -19,7 +19,7 @@ public class LearningLessonVO {
     private Long courseId;
 
     @ApiModelProperty("课程名称")
-    private String courseName;
+    private String courseName; 
 
     @ApiModelProperty("课程封面")
     private String courseCoverUrl;

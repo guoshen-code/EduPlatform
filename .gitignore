@@ -15,3 +15,16 @@ target
 .project
 logs
 job
+
+# 证书 / 密钥
+*.jks
+*.p12
+*.pem
+*.key
+*.keystore
+.env
+
+# 本地环境配置（内网 IP、数据库密码）
+**/bootstrap-local.yml
+**/application-local.yml
+**/*-local.yml

@@ -65,4 +65,14 @@ public interface CourseClient {
             @RequestParam(value = "withCatalogue", required = false) boolean withCatalogue,
             @RequestParam(value = "withTeachers", required = false) boolean withTeachers
     );
+    /**
+     * 获取课程基础信息
+     *
+     * @param id  课程id
+     * @param see 是否是用于查看页面查看数据，默认是查看,如果不是界面查看数据就是编辑页面使用
+     * @return 课程基础信息
+     */
+    @GetMapping("/courses/baseInfo/{id}")
+    CourseBaseInfoDTO baseInfo(@PathVariable("id") Long id,
+                               @RequestParam(value = "see", required = false, defaultValue = "1") Boolean see);
 }

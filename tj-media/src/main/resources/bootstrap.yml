@@ -44,15 +44,15 @@ tj:
     file: TENCENT
     media: TENCENT
   tencent:
-    appId: 1312394356
-    secretId: ***REMOVED***
-    secretKey: ***REMOVED***
+    appId: ${TENCENT_APP_ID:1312394356}
+    secretId: ${TENCENT_SECRET_ID:}
+    secretKey: ${TENCENT_SECRET_KEY:}
     vod:
       enable: true
       vodValidSeconds: 7776000
       region: "ap-shanghai"
       procedure: "wisehub-base"
-      urlKey: "***REMOVED***"
+      urlKey: ${TENCENT_VOD_URL_KEY:}
       pfcg: "basicDrmPreset"
     cos:
       enable: true
